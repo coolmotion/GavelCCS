@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/* Add custom styles here if needed */
+
+.cta-button:hover {
+    transform: scale(1.10); /* Scale up on hover */
+}
+/*Scale animation*/
+@keyframes scaleAnimation {
+    0% {
+      transform: scale(1); /* Initial scale */
+    }
+    50% {
+      transform: scale(1.05); /* Scale to 1.2x at midpoint */
+    }
+    100% {
+      transform: scale(1); /* Return to original scale */
+    }
+  }
+  
+  .scaling-text {
+    animation: scaleAnimation 6s  infinite; /* Animation properties */
+  }
