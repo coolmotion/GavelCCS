@@ -1,185 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0-beta2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Your Company</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+  <title>Gavel Club of College of Chemical Sciences</title>
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+      @keyframes pulse {
+        0% {
+          transform: scale(0.8);
+      
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1.5s 2s ease-in-out; /* Run the fade-in animation once */
+    }
+      .bg-pulse {
+        animation: pulse 2s 1s 1;
+      }
+    </style>
 </head>
-
 <body>
-    <nav class="bg-white p-3 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="path_to_your_logo.png" alt="Your Company Logo" class="w-10 h-10 mr-2">
-                <a href="#" class="text-black text-xl font-bold">Gavel Club of CCS</a>
-            </div>
-            <div class="hidden md:flex flex-grow items-center justify-center space-x-4">
-                <a href="#" class="text-gray-600 font-semibold hover:text-blue-500">Home</a>
-                <a href="#" class="text-gray-600 font-semibold hover:text-blue-500">About</a>
-                <a href="#" class="text-gray-600 font-semibold hover:text-blue-500">Services</a>
-                <a href="#" class="text-gray-600 font-semibold hover:text-blue-500">Contact</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="burger-icon" class="text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- CTA Button -->
-            <div class="hidden md:flex">
-                <a href="#" class="cta-button bg-blue-500 text-white font-bold py-2 px-4 rounded-full transition duration-100">Blog</a>
-            </div>
-        </div>
-        <!-- Mobile menu (hidden by default) -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="flex flex-col items-center p-10">
-                <a href="#" class="text-gray-600 font-semibold py-2">Home</a>
-                <a href="#" class="text-gray-600 font-semibold py-2">About</a>
-                <a href="#" class="text-gray-600 font-semibold py-2">Services</a>
-                <a href="#" class="text-gray-600 font-semibold py-2">Contact</a>
-            </div>
-            <!-- CTA Button in mobile menu -->
-            <div class="flex justify-center">
-                <a href="#" class="cta-button bg-blue-500 text-white font-bold py-2 px-4 rounded transition duration-300">Blog</a>
-            </div>
-        </div>
-    </nav>
-    
-<section id="banner" class="min-h-screen ">
-<div class="sticky top-10 z-55" style="padding-top: 120px;">
-    <div class="fadeIn container mx-auto text-center">
-          <h1 class="text-6xl font-bold scaling-text">
-            <span class="text-blue-500">Empower</span> <span class="text-gray-500 text-2xl">Tomorrow's Leaders,</span><br> <span class="text-black">Today!</span>
-          </h1>
-          <p class="text-gray-500 text-lg mb-8 px-10 pt-10 hidden md:block">
-            The Gavel Club of CCS is an affiliation of Toastmasters International. We empower undergraduates of all backgrounds to enhance their communication and leadership skills. Through workshops, speeches, and supportive networking, we foster growth and confidence, preparing them for future success in various endeavors. Our goal is to cultivate effective communicators and capable leaders, shaping a brighter tomorrow.
-          </p>
-          <p class="text-gray-500 text-lg mb-8 px-10 pt-10 block sm:hidden">
-            Welcome to Gavel Club of CCS. We empower undergraduates of all backgrounds to enhance their communication and leadership skills
-        </p>
-          <div class="flex justify-center pb-10">
-            <a href="#" class="bg-blue-500 text-white hover:bg-blue-700 hover:text-white py-2 px-6 rounded-full mr-4">Learn More</a>
-            <a href="#" class="bg-blue-500 text-white hover:bg-blue-700 hover:text-white py-2 px-6 rounded-full">Join Us</a>
-          </div>
+
+  
+  <nav class="fixed top-0 w-full flex items-center justify-between flex-wrap bg-white p-4 px-10 pl-10 pr-10 rounded-b-2xl shadow-2xl" style="z-index: 500; padding: 4 10vw;">
+    <div class="flex items-center flex-shrink-0 text-blue-600 font-bold mr-6">
+        <img src="images/logo.png" alt="Company Logo" class="h-8 ">
+        <span class="text-base ml-2 text-black">Gavel Club of CCS</span>
     </div>
-</div>
+    <div class="hidden lg:flex lg:w-auto lg:items-center lg:justify-center">
+        <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-800 text-base hover:text-blue-300 mx-4 transition duration-300">
+            Home
+        </a>
+        <a href="https://ccsgavel.blogspot.com/" class="block mt-4 lg:inline-block lg:mt-0 text-blue-600 text-base hover:text-blue-300 mx-4 transition duration-300">
+            Blog
+        </a>
+        <a href="leadership.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-600 text-base hover:text-blue-300 mx-4 transition duration-300">
+            leadership
+        </a>
+        <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-600 text-base hover:text-blue-300 mx-4 transition duration-300">
+            Contact
+        </a>
+        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-blue-600 text-base hover:text-blue-300 mx-4 transition duration-300">
+            Downloads
+        </a>
+    </div>
+    <div class="hidden lg:flex lg:w-auto lg:items-center lg:justify-end">
+        <a href="blog.html" class="block mt-4 lg:inline-block lg:mt-0 text-white bg-blue-600 hover:bg-blue-300 py-2 px-4 rounded-full hover:text-white transition duration-300">
+            The Gavelier
+        </a>
+    </div>
+    <div class="block lg:hidden">
+      <button id="toggle-btn" class="flex items-center px-3 py-2 border rounded text-blue-600 font-bold border-blue-500">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+    <div id="menu" class="w-full flex-grow lg:hidden hidden mt-2 lg:mt-0">
+      <div class="text-sm">
+            <a href="index.html" class="block mt-4 text-center text-blue-600 font-bold hover:text-blue-300 mx-4 transition duration-300">
+                Home
+            </a>
+            <a href="leadership.html" class="block mt-4 text-center text-blue-600 font-bold hover:text-blue-300 mx-4 transition duration-300">
+                leadership
+            </a>
+            <a href="s.html" class="block mt-4 text-center text-blue-600 font-bold hover:text-blue-300 mx-4 transition duration-300">
+                Services
+            </a>
+            <a href="https://ccsgavel.blogspot.com/" class="block mt-4 text-center text-blue-600 font-bold hover:text-blue-300 mx-4 transition duration-300">
+                Blog
+            </a>
+            <a href="contact.html" class="block mt-4 text-center text-blue-600 font-bold hover:text-blue-300 mx-4 transition duration-300">
+                Contact
+            </a>
+            <a href="about.html" class="block mt-4 text-center text-blue-600 font-bold hover:text-blue-300 mx-4 transition duration-300">
+                About
+            </a>
+        </div>
+    </div>
+</nav>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-b3128368-6efa-4143-b031-5f482fef806e" data-elfsight-app-lazy></div>
+
+<section>
+    <div class="splash-screen">
+      <img src="images/splash-screen.svg" alt="Logo" class="logo">
+    </div>
 </section>
-<section class="bg-black min-h-screen flex flex-col items-center justify-center z-10" style="z-index: 100 !important;">
-   
-    <h1 class="text-white text-4xl font-bold p-8">Latest Activity</h1>
+<section class="flex items-center justify-center min-h-screen bg-white pt-10">
+  <div class="fadeIn container mx-auto text-center pulse fade-in">
+      <h1 class="text-6xl font-bold scaling-text">
+          <span class="text-blue-500">Empower</span> <span class="text-gray-500 text-2xl">Tomorrow's Leaders,</span><br> <span class="text-black">Today!</span>
+      </h1>
+      <p class="text-gray-800 text-lg mb-8 px-10 pt-10 hidden md:block">
+          The Gavel Club of CCS is an affiliation of Toastmasters International. We empower undergraduates of all backgrounds to enhance their communication and leadership skills.
+      </p>
+      <p class="text-gray-800 text-lg mb-8 px-10 pt-10 block sm:hidden">
+          Welcome to Gavel Club of CCS. We empower undergraduates of all backgrounds to enhance their communication and leadership skills.
+      </p>
+      <div class="flex justify-center pb-4">
+          <a href="#" class="bg-blue-500 text-white hover:bg-blue-700 hover:text-white py-2 px-6 rounded-full mr-4">Explore More</a>
+      </div>
 
-    <div class="flex flex-wrap justify-center">
-        <!-- Card 1 -->
-        <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden mx-4 my-4 custom-shadow">
-            <img src="img/img1.jpg" alt="Image" class=" object-cover">
-            <div class="p-4">
-                <h2 class="text-white text-xl font-bold mb-2">The Orator</h2>
-                <p class="text-gray-400">The first ever physical Orator at Gavel CCS was held on the 20th of September at the PPGL auditorium🎙. 
-                    “The Orator” Quest 4 kicked off with the TMOD for the day, Gav. Keshiah, warmly welcoming everyone and expounding on the power of speech.
-                    The speakers for the day brought forward some powerful speeches, evoking a range of emotions within the listeners, with the captivating stories they had to share🗣. 
-                    The official proceedings concluded after a comprehensive evaluation session followed by a precise report given out by each role player. 
-                    The president, Gav. Sanuga made an official announcement regarding the upcoming Gavel CCS webpage, Credence workshop, and CCS best speaker competition. 
-                    Swipe to see some clicks from the day! Stay tuned!</p>
-            </div>
-        </div>
+  </div>
+</section>
 
-        <!-- Card 2 -->
-        <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden mx-4 my-4 custom-shadow">
-            <img src="img/img2.jpg" alt="Image" class=" object-cover">
-            <div class="p-4">
-                <h2 class="text-white text-xl font-bold mb-2">The 97th Educational Meeting</h2>
-                <p class="text-gray-400">The 97th Educational Meeting at Gavel CCS was held on the 6th of September at the PPGL Auditorium. ✨
-                    The TMOD for the day, Gav. Santo started off the meeting and prepared everyone for what became a very interesting meeting. ✨
-                    It was followed by the round-robin session, conducted by Gav. Senaya and the table topics session conducted by Gav. Dinara during which we saw some humorous speeches and exceptional speakers. 🗣 The official proceedings concluded after a comprehensive evaluation session. 📝
-                    The role players for the day did an amazing job at making the meeting a great success. 🤩
-                    We cannot wait to see everyone again soon! Stay tuned! 😌</p>
-            </div>
-        </div>
 
-        <!-- Card 3 
-        <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden mx-4 my-4 custom-shadow">
-            <img src="https://via.placeholder.com/300" alt="Image" class="w-full h-40 object-cover">
-            <div class="p-4">
-                <h2 class="text-white text-xl font-bold mb-2">Title 3</h2>
-                <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
+  <section>
+  <div class="text-black p-10 section border-t border-blue-600 bbox" style="background-color: white;">
+    <div class="animated-text">
+    <h3 class="text-5xl font-bold mb-5 text-center text-black">What we do</h3>
+    <p class="text-gray-800 text-m text-center">
+      Welcome to the sonic realm of creativity and innovation! At our cutting-edge audio and video production company, we are not just creators; we are curators of experiences that resonate, captivate, and leave an indelible mark.
+    </p>
+    </div>
+  </div>
 
-        <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden mx-4 my-4 custom-shadow">
-            <img src="https://via.placeholder.com/300" alt="Image" class="w-full h-40 object-cover">
-            <div class="p-4">
-                <h2 class="text-white text-xl font-bold mb-2">Title 4</h2>
-                <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div!-->
-        </div>
-    </section>
-    <section>
-        <h1 class="text-black text-4xl font-bold p-8 text-center">Latest Activity</h1>
-        <div class="container mx-auto my-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-              <!-- Article 1 -->
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold mb-2">Article 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Read More</button>
-              </div>
-        
-              <!-- Article 2 -->
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold mb-2">Article 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Read More</button>
-              </div>
-        
-              <!-- Article 3 -->
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold mb-2">Article 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Read More</button>
-              </div>
-        
-              <!-- Add more articles as needed -->
-            </div>
-            <div class="flex items-center justify-center m-8">
-                <a href="#" class="cta-button bg-blue-500 text-white font-bold py-2 px-4 rounded-full transition duration-300">Explore Our Blog</a>
+  <div class="flex justify-center bg-white">
+  <div class="cards bg-white" style="margin-left: 5vw; margin-right: 5vw; margin-bottom: 40px; margin-top: 40px;">
+
+    <div class="card red border border-blue-600 " style="background-color: white;">
+      <p class="text-2xl p-4 text-black">Monthly Meeting</p>
+      <img src="images/meetings.jpg" alt="Your Image" class="w-full h-auto rounded-md">
+      <p class="text-gray-500 mt-4">Create captivating melodies and harmonies with our music composing services. Let us bring your musical ideas to life.</p>
+    </div>
+
+    <div class="card blue border border-blue-600 " style="background-color: white;">
+      <p class="text-2xl p-4 text-black">Workshops</p>
+      <img src="images/workshops.jpg" alt="Your Image" class="w-full h-auto rounded-md">
+      <p class="text-gray-500 mt-4">Create captivating melodies and harmonies with our music composing services. Let us bring your musical ideas to life.</p>
+    </div>
+
+    <div class="card green border border-blue-600 " style="background-color: white;">
+      <p class="text-2xl p-4 text-black">Events</p>
+      <img src="images/meetings.jpg" alt="Your Image" class="w-full h-auto rounded-md">
+      <p class="text-gray-500 mt-4">Create captivating melodies and harmonies with our music composing services. Let us bring your musical ideas to life.</p>
+    </div>
+
+  </div>
+</div>
+
+</section>
+<section id="contact-us" class="content-section bg-white py-10 section border-t border-blue-600">
+  <div class="animated-text">
+    <h2 class="text-5xl font-bold text-black text-center">Latest Updates</h2>
+  </div>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="U7GQyWOw"></script>
+  <div class="container mx-auto mt-5">
+    <div class="flex flex-wrap">
+      <div class="w-full md:w-1/2 lg:w-1/3 mb-4 p-4">
+        <div class="card mx-auto" style="max-width: 400px;">
+          <div class="card-header">
+            <div class="animated-text">
+              <h4 class="text-2xl font-bold text-blue-600 p-2">Facebook</h4>
             </div>
           </div>
-    </section>
-    <!-- Footer -->
-<footer class="bg-black text-white text-center py-4">
-    <div class="container mx-auto">
-      <p>&copy; 2023 Gavel CCS. All rights reserved.</p>
-      <div class="mt-4">
-        <!-- Social Icons -->
-        <a href="#" class="text-white mx-2">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" class="text-white mx-2">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="text-white mx-2">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <!-- Add more social icons as needed -->
+          <div class="card">
+          </div>
+          <div class="animated-text ">
+            <div class="fb-page" data-href="https://www.facebook.com/gavelclub.ccs" data-tabs="timeline" data-width="350px" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tlabstudios" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tlabstudios">T-LAB Studios</a></blockquote></div>          </div>
+        </div>
+      </div>
+      
+      <div class="w-full md:w-1/2 lg:w-1/3 mb-4">
+        <div class="card mx-auto" style="max-width: 350px;">
+          <div class="card-header">
+            <div class="animated-text">
+              <h4 class="text-2xl font-bold text-blue-600 p-2">Blogger</h4>
+            </div>
+          </div>
+          <div class="card-body">
+          </div>
+         
+              <iframe src ="https://ccsgavel.blogspot.com/" width="100%" height="500">
+                <p>Your browser does not support iFrames.</p>
+                </iframe>
+            
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 mb-4">
+        <div class="card mx-auto" style="max-width: 350px;">
+          <div class="card-header">
+            <div class="animated-text">
+              <h4 class="text-2xl font-bold text-blue-600 p-2">YouTube</h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="animated-text">
+              <p class="text-gray-500 p-2">Subscribe to our YouTube channel to watch our latest videos and stay informed.</p>
+            </div>
+          </div>
+          <div class="animated-text">
+            <iframe src="https://www.youtube.com/embed/?listType=user_uploads&list=TLABPRODUCTIONS" width="100%" height="180" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
       </div>
     </div>
+  </div>
+</section> 
+<section class=" flex items-center justify-center bg-section">
+  <div class="animated-text">
+            
+    <p class="text-blue-600 text-2xl text-m p-8 mt-8">
+      Step forward and mold the leaders of tomorrow!
+    <div class="flex items-center justify-center p-4">
+        <a href="portfolio.html" class="m-2 inline-block px-8 py-2 rounded-full text-white bg-blue-600">Portfolio</a>
+        
+    </div>
+</div>
+</section> 
+  <footer>
+    <div>
+      <div class="footer-social">
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <p>&copy; 2024 Gavel Club of College of Chemical Sciences. Designed by <a href="https://www.coolmotion.com" class="text-orange-500">SNAPRCCS</a></p>
   </footer>
-<script src="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-        const burgerIcon = document.getElementById('burger-icon');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        burgerIcon.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+  $(document).ready(function() {
+    $('#toggle-btn').click(function() {
+      $('#menu').slideToggle(300);
+    });
+  });
 </script>
-</body>
+<script>
+      const animatedTextElements = document.querySelectorAll('.animated-text');
 
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('fade-in');
+                  observer.unobserve(entry.target);
+              }
+          });
+      }, { threshold: 0.5 });
+
+      animatedTextElements.forEach(element => {
+          observer.observe(element);
+      });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+  });
+
+  // Add a scroll event listener to trigger fade-in
+  window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top <= windowHeight * 0.25) {
+        element.classList.add('fade-in-show');
+      }
+    });
+  });
+</script>
+
+
+</body>
 </html>
