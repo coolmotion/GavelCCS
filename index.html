@@ -117,14 +117,14 @@
           Welcome to Gavel Club of CCS. We empower undergraduates of all backgrounds to enhance their communication and leadership skills.
       </p>
       <div class="flex justify-center pb-4">
-          <a href="#" class="bg-blue-500 text-white hover:bg-blue-700 hover:text-white py-2 px-6 rounded-full mr-4">Explore More</a>
+          <a href="#" id"scrollBtn" class="bg-blue-500 text-white hover:bg-blue-700 hover:text-white py-2 px-6 rounded-full mr-4">Explore More</a>
       </div>
 
   </div>
 </section>
 
 
-  <section>
+  <section id="section1">
   <div class="text-black p-10 section border-t border-blue-600 bbox" style="background-color: white;">
     <div class="animated-text">
     <h3 class="text-5xl font-bold mb-5 text-center text-black">What we do</h3>
@@ -283,7 +283,35 @@
     });
   });
 </script>
+ <script>
+        // Function to scroll to the next section smoothly
+        function scrollToNextSection() {
+            const currentSection = document.querySelector('.active-section');
+            const nextSection = currentSection.nextElementSibling;
 
+            if (nextSection) {
+                nextSection.classList.add('active-section');
+                currentSection.classList.remove('active-section');
+
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Show the scroll button when user scrolls past the first section
+        window.addEventListener('scroll', function () {
+            const scrollBtn = document.getElementById('scrollBtn');
+            const section1 = document.getElementById('section1');
+
+            if (window.scrollY > section1.clientHeight) {
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        // Set the first section as active by default
+        document.getElementById('section1').classList.add('active-section');
+    </script>
 
 </body>
 </html>
